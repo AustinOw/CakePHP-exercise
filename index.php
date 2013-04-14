@@ -16,6 +16,9 @@
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
+          <?php 
+            echo "Hello world!"; 
+          ?>
           <a id="forkme_banner" href="https://github.com/AustinOw/CakePHP-exercise">View on GitHub</a>
 
           <h1 id="project_title">Cakephp-exercise</h1>
