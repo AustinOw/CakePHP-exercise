@@ -53,6 +53,7 @@ Setup Requirement:
       D. Set CakePHP Database setting [Click Here for Details](http://book.cakephp.org/1.2/en/The-Manual/Developing-with-CakePHP/Configuration.html)
           a. Rename app/config/database.php.default to database.php
           b. go into it and set the database detail as you have set in your sql database:
+          
               var $default = array('driver'      => 'mysql',
                                    'persistent'  => false,
                                    'host'        => 'localhost',
