@@ -1,39 +1,65 @@
-CakePHP
-=======
+Installation Guide
+==================
 
-[![CakePHP](http://cakephp.org/img/cake-logo.png)](http://www.cakephp.org)
+Setup Requirement:
+  [CakePHP](http://www.cakephp.org) - The rapid development PHP framework
+  [BootStrap](http://twitter.github.io/bootstrap/index.html) - The Powerful Web Development framework 
 
-CakePHP is a rapid development framework for PHP which uses commonly known design patterns like Active Record, Association Data Mapping, Front Controller and MVC.
-Our primary goal is to provide a structured framework that enables PHP users at all levels to rapidly develop robust web applications, without any loss to flexibility.
+  Local Web Hosting Software:
+  [MAMP](http://www.mamp.info/) - Local Web Hosting for Macintosh
 
-Some Handy Links
-----------------
+  - SQL Manager
+  - FTP Manager
+  
+1. Install MAMP
+    a. Configure The port number from the WAMP Main Window. to "MAMP Port"
+    b. Set "Run Apache/MySQL server as user "www/mysql"
+    c. Set MySQL root password, and unclick "Allow local access only"
+    d. Make sure PHP version is higher than CakePHP requirement. For myself, I am using PHP 5.4.10
+    e. Finaly, click "Start" and Check "WebStat"
 
-[CakePHP](http://www.cakephp.org) - The rapid development PHP framework
+2. Download the CakePHP, and unpack to following: 
+    For MAMP:
+      A. Unpack to /Applications/MAMP/htdoc
+      B. Structure will be like this:-
 
-[Cookbook](http://book.cakephp.org) - THE Cake user documentation; start learning here!
-
-[Plugins](http://plugins.cakephp.org/) - A repository of extensions to the framework
-
-[The Bakery](http://bakery.cakephp.org) - Tips, tutorials and articles
-
-[API](http://api.cakephp.org) - A reference to Cake's classes
-
-[CakePHP TV](http://tv.cakephp.org) - Screen casts from events and video tutorials
-
-[The Cake Software Foundation](http://cakefoundation.org/) - promoting development related to CakePHP
-
-Get Support!
-------------
-
-[Our Google Group](http://groups.google.com/group/cake-php) - community mailing list and forum
-
-[#cakephp](http://webchat.freenode.net/?channels=#cakephp) on irc.freenode.net - Come chat with us, we have cake.
-
-[Q & A](http://ask.cakephp.org/) - Ask questions here, all questions welcome
-
-[Lighthouse](http://cakephp.lighthouseapp.com/) - Got issues? Please tell us!
-
-[![Bake Status](https://secure.travis-ci.org/cakephp/cakephp.png?branch=master)](http://travis-ci.org/cakephp/cakephp)
-
-![Cake Power](https://raw.github.com/cakephp/cakephp/master/lib/Cake/Console/Templates/skel/webroot/img/cake.power.gif)
+            /Applications/MAMP/htdoc
+                /app
+                /cake
+                /vendors
+                /.htaccess
+                /index.php
+                /README
+                
+      C. Set Apache, mod_rewrite and .htaccess [Click Here for Details](http://book.cakephp.org/1.2/en/The-Manual/Developing-with-CakePHP/Installation.html#apache-and-mod-rewrite-and-htaccess)
+          a. In http.conf make sure setting are same as following:
+          
+                <Directory />
+                    Options FollowSymLinks
+                    AllowOverride All
+                #    Order deny,allow
+                #    Deny from all
+                </Directory>
+              
+              And Uncommand " # " the following line:
+                LoadModule rewrite_module libexec/apache2/mod_rewrite.so
+          
+          b. Check for .htaccess file same as the one inside cakephp [installtion webpage](http://book.cakephp.org/1.2/en/The-Manual/Developing-with-CakePHP/Installation.html#apache-and-mod-rewrite-and-htaccess). 
+                - Go Terminal and type command following to check those .htaccess file
+                  - nano /Applications/MAMP/htdoc/.htaccess
+                  - nano /Applications/MAMP/htdoc/app/.htaccess
+                  - nano /Applications/MAMP/htdoc/app/webroot/.htaccess
+                  
+      D. Set CakePHP Database setting [Click Here for Details](http://book.cakephp.org/1.2/en/The-Manual/Developing-with-CakePHP/Configuration.html)
+          a. Rename app/config/database.php.default to database.php
+          b. go into it and set the database detail as you have set in your sql database:
+              var $default = array('driver'      => 'mysql',
+                                   'persistent'  => false,
+                                   'host'        => 'localhost',
+                                   'login'       => 'cakephpuser',
+                                   'password'    => 'c4k3roxx!',
+                                   'database'    => 'my_cakephp_project',
+                                   'prefix'      => '');
+                              
+      
+            
