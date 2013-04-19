@@ -3,6 +3,18 @@ Installation Guide
 <b>Sample Page After finish Install</b>
 <pre>http://localhost/home</pre>
 
+<b>Example Files for Home Page</b>
+<pre>
+Controller File:
+/app/Controller/HomeController.php
+
+Model File:
+/app/Model/Home.php
+
+View File:
+/app/View/Home/index.ctp
+</pre>
+
 <b>Setup Requirement:</b>
 
 1. [CakePHP](http://www.cakephp.org) - The rapid development PHP framework
@@ -109,4 +121,23 @@ INSERT INTO `inventories` (`ItemID`,`ItemName`,`UnitPrice`,`Quantity`,`Category`
 6. Test The Page
 <pre>
 http://localhost/home
+</pre>
+
+<b>BootStrap<b>
+BootStrap is already include inside these repository.
+However, if you would like to know how to install,
+please visit [These Page](http://twitter.github.io/bootstrap/getting-started.html) or step below:
+<pre>
+1. Download Boot Strap
+2. Save BootStrap into as following
+/Applications/MAMP/htdoc/app/webroot/
+  ├── css/
+  │   ├── bootstrap.css
+  │   ├── bootstrap.min.css
+  ├── js/
+  │   ├── bootstrap.js
+  │   ├── bootstrap.min.js
+  └── img/
+      ├── glyphicons-halflings.png
+      └── glyphicons-halflings-white.png
 </pre>
