@@ -45,8 +45,8 @@ class Mysql extends DboSource {
 		'persistent' => true,
 		'host' => 'localhost',
 		'login' => 'root',
-		'password' => '',
-		'database' => 'cake',
+		'password' => 'a1b2c3d4',
+		'database' => 'CakePHP_DB',
 		'port' => '3306'
 	);
 

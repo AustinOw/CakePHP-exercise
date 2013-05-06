@@ -7,6 +7,11 @@ http://www.marcofolio.net/webdesign/building_a_blog_with_cakephp_part_1_getting_
 		var $name = 'Product';
 		var $uses = array('Inventory');
 
+		public function beforeFilter() {
+			//parent::beforeFilter();
+			$this->Auth->allow();
+		}
+
 		// Used when indexing the page (http://yourdomain.com/product/)
 		function index() {
 			$this->set('Items', $this->Inventory->find('all'));
